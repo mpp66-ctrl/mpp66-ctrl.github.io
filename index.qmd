@@ -1,0 +1,60 @@
+---
+title: "Welcome to My Website"
+author: "Manan Patel"
+date: today
+jupyter: mpp66-venv
+format:
+  html:
+    theme: journal
+    toc: true
+---
+
+# Hello, World!
+
+Welcome to my Quarto website, built for **AD688 - Big Data and Cloud Analytics for Business**, Assignment 1.
+
+## PySpark Demo
+
+This page embeds a live PySpark job that runs when the site is rendered, proving the cloud-computing environment set up on this AWS EC2 instance actually works end to end.
+
+```{python}
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("Assignment1Demo").getOrCreate()
+
+data = [
+    ("Data Scientist", 120000, "Remote"),
+    ("Cloud Engineer", 115000, "Boston"),
+    ("ML Engineer", 130000, "Remote"),
+    ("Data Analyst", 85000, "New York"),
+    ("DevOps Engineer", 110000, "Boston"),
+]
+columns = ["job_title", "avg_salary", "location"]
+
+df = spark.createDataFrame(data, columns)
+df.show()
+```
+
+### Summary Statistics
+
+```{python}
+df.describe("avg_salary").show()
+```
+
+### Average Salary by Location
+
+```{python}
+import matplotlib.pyplot as plt
+
+pdf = df.groupBy("location").avg("avg_salary").toPandas()
+pdf.columns = ["location", "avg_salary"]
+
+plt.figure(figsize=(6, 4))
+plt.bar(pdf["location"], pdf["avg_salary"], color="#457b9d")
+plt.title("Average Salary by Location")
+plt.ylabel("Average Salary ($)")
+plt.tight_layout()
+plt.show()
+```
+
+This site is set up for GitHub Pages and deployed via GitHub Actions.

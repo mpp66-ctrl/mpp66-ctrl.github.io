@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+## About Me
+
+I'm Manan Patel, a student in AD688 - Big Data and Cloud Analytics for Business at Boston University's Metropolitan College.
+
+## About This Site
+
+This site is built with [Quarto](https://quarto.org), version-controlled with Git and GitHub, developed directly on an AWS EC2 instance, and deployed automatically via GitHub Actions to GitHub Pages.
