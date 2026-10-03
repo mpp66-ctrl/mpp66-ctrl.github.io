@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Portfolio of Manan Patel, an MS Applied Business Analytics student at Boston University with experience in business analysis, financial analysis, and cloud-scale data analytics.">
+<meta name="description" content="Selected academic projects by Manan Patel: job-market analytics with PySpark on AWS, a team career-evaluation product, and more.">
 
-<title>Business Analytics Portfolio – Manan Patel</title>
+<title>Projects – Manan Patel</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -64,16 +64,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Business Analytics Portfolio">
-<meta property="og:description" content="Portfolio of Manan Patel, an MS Applied Business Analytics student at Boston University with experience in business analysis, financial analysis, and cloud-scale data analytics.">
+<meta property="og:title" content="Projects">
+<meta property="og:description" content="Selected academic projects by Manan Patel: job-market analytics with PySpark on AWS, a team career-evaluation product, and more.">
 <meta property="og:image" content="https://mpp66-ctrl.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Manan Patel">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:alt" content="Manan Patel, business analytics portfolio">
-<meta name="twitter:title" content="Business Analytics Portfolio">
-<meta name="twitter:description" content="Portfolio of Manan Patel, an MS Applied Business Analytics student at Boston University with experience in business analysis, financial analysis, and cloud-scale data analytics.">
+<meta name="twitter:title" content="Projects">
+<meta name="twitter:description" content="Selected academic projects by Manan Patel: job-market analytics with PySpark on AWS, a team career-evaluation product, and more.">
 <meta name="twitter:image" content="https://mpp66-ctrl.github.io/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="630">
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -304,72 +304,168 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section class="mp-hero">
-  <div class="mp-wrap mp-hero-grid">
-    <div>
-      <p class="mp-eyebrow">MS Applied Business Analytics · Boston University</p>
-      <h1>Manan Patel</h1>
-      <p class="mp-lead">Business analytics student turning complex data into clear recommendations.</p>
-      <p class="mp-sub">I'm a Master's candidate at Boston University's Metropolitan College with a background in financial technology, research analysis, and investment analysis. My work spans business analysis, data analysis, and cloud-scale analytics.</p>
-      <p class="mp-cta">
-        <a class="btn btn-primary btn-lg" href="projects.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> View my projects</a>
-        <a class="btn btn-outline-primary btn-lg" href="assets/Manan_Patel_CV.pdf"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download CV</a>
-        <a class="btn btn-outline-secondary btn-lg" href="contact.html"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</a>
-      </p>
-    </div>
-    <div class="mp-avatar" aria-hidden="true">MP</div>
+<section class="mp-pagehead">
+  <div class="mp-wrap">
+    <h1>Projects</h1>
+    <p>Selected work from my Master's program, each built around turning a large dataset into something a decision-maker can use.</p>
   </div>
 </section>
 
 <section class="mp-section">
   <div class="mp-wrap">
-    <h2>What I do</h2>
-    <div class="mp-tiles">
-      <div class="mp-tile">
-        <i class="bi bi-diagram-3" aria-hidden="true"></i>
-        <h3>Business analysis</h3>
-        <p>Requirements gathering, process documentation, and clear communication between business and technical teams.</p>
+    <h2>Featured</h2>
+
+    <article class="mp-project" id="salary-analysis">
+      <a class="mp-thumb" href="assets/img/m03-bubble-occupations.webp" aria-label="Open the occupation salary chart at full size">
+        <img src="assets/img/m03-bubble-occupations.webp" width="1200" height="566" loading="lazy" decoding="async" alt="Bubble chart of median salary for the 20 occupations with the most job postings. Data Scientists and Software Developers sit highest, and the largest bubbles cluster in the lower middle of the range.">
+      </a>
+      <div class="mp-body">
+        <p class="mp-kicker">Course project · AD688 Module 3 · Fall 2026</p>
+        <h3>Job-Market Salary Analysis at Scale</h3>
+        <p>I used PySpark on AWS to clean and analyze about 504,000 job postings, then built interactive Plotly charts of salary by industry, occupation, education level, and remote-work type.</p>
+        <p>Postings without a stated salary were left out instead of being filled with an average, and each chart's write-up notes the data's quirks, such as hourly wages and default experience values. One finding: median posted pay for remote roles ($128,000) ran well above onsite roles ($77,500). The dataset was provided by the course.</p>
+        <ul class="mp-tags" aria-label="Technologies">
+          <li>PySpark</li><li>AWS EC2</li><li>Plotly</li><li>Quarto</li>
+        </ul>
       </div>
-      <div class="mp-tile">
-        <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
-        <h3>Data analysis and visualization</h3>
-        <p>Python, SQL, Excel, Power BI, and Tableau to analyze data and present findings people can act on.</p>
+    </article>
+
+    <article class="mp-project" id="career-evaluation-product">
+      <a class="mp-thumb" href="https://mpp66-ctrl.github.io/ad688-industry-career-product-group6/" aria-label="Open the Group 6 project site">
+        <img src="assets/img/g6-role-donut.webp" width="900" height="638" loading="lazy" decoding="async" alt="Donut chart showing the share of 258 analyzed job postings by role type, led by data engineer at 36 percent, data scientist at 18 percent, and machine learning engineer at 14 percent.">
+      </a>
+      <div class="mp-body">
+        <p class="mp-kicker">Team project · AD688 · Fall 2026</p>
+        <h3>Career Evaluation Product, Group 6</h3>
+        <p>A team-built career-evaluation product for job seekers targeting Data Analyst roles, with growth paths toward Data Scientist and Analytics Engineer, scoped to the Data Processing, Hosting, and Related Services industry (NAICS 5182).</p>
+        <p>The project site walks through data preparation, exploratory analysis, and a skill-gap analysis that asks which skills and tools best separate analyst roles from data-science and ML-oriented roles.</p>
+        <ul class="mp-tags" aria-label="Technologies">
+          <li>Quarto</li><li>GitHub Pages</li><li>Labor-market analytics</li><li>Team project</li>
+        </ul>
+        <p class="mp-links">
+          <a class="btn btn-sm btn-primary" href="https://mpp66-ctrl.github.io/ad688-industry-career-product-group6/"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live site</a>
+          <a class="btn btn-sm btn-outline-primary" href="https://github.com/mpp66-ctrl/ad688-industry-career-product-group6"><i class="bi bi-github" aria-hidden="true"></i> Source</a>
+        </p>
       </div>
-      <div class="mp-tile">
-        <i class="bi bi-cloud-check" aria-hidden="true"></i>
-        <h3>Big data and cloud</h3>
-        <p>Hands-on coursework with PySpark and Spark SQL on AWS, with reproducible reporting in Quarto.</p>
-      </div>
+    </article>
+  </div>
+</section>
+
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap">
+    <h2>More charts from the salary analysis</h2>
+    <p class="mp-section-intro">The full analysis has 12 charts. The occupation chart is featured above, and the rest are grouped below. Select any chart to open it at full size. Medians use only postings that list a salary, and the scatter plots show a random sample of 100 postings per group.</p>
+
+    <h3 class="mp-subhead">Pay by industry</h3>
+    <div class="mp-figs">
+      <figure class="mp-fig mp-fig-wide figure">
+        <a href="assets/img/m03-box-industry.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-box-industry.webp" width="1200" height="536" loading="lazy" decoding="async" alt="Box plots of annual salary by industry, split by employment type: full-time, part-time, contract and other. Full-time pay is highest in industries on the left, such as Arts, Entertainment and Recreation, and lowest for Retail Trade on the right. Part-time pay sits far below the others in every industry shown." class="figure-img">
+        </a>
+        <figcaption><strong>Salary by industry and employment type:</strong> full-time median pay is highest in Arts, Entertainment, and Recreation ($150,000, based on only 43 postings) and lowest in Retail Trade ($41,600). Part-time figures annualize hourly wages at an assumed 20 hours a week.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="mp-subhead">Pay by education level</h3>
+    <div class="mp-figs">
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-associates.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-associates.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Associate's or lower postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Associate's or lower:</strong> 30,710 postings with a usable salary, median $55,349. 95% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-bachelors.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-bachelors.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Bachelor's postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Bachelor's:</strong> 7,782 postings with a usable salary, median $130,500. 91% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-masters.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-masters.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Master's postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Master's:</strong> 2,018 postings with a usable salary, median $104,000. 83% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-phd.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-phd.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 PhD postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>PhD:</strong> 1,048 postings with a usable salary, median $123,048. 95% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="mp-subhead">Pay by work type</h3>
+    <div class="mp-figs">
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-remote.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-remote.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Remote postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Remote:</strong> 3,967 postings with a usable salary, median $118,080. 87% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-hybrid.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-hybrid.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Hybrid postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Hybrid:</strong> 2,567 postings with a usable salary, median $115,000. 78% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-scatter-onsite.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-scatter-onsite.webp" width="1200" height="558" loading="lazy" decoding="async" alt="Scatter plot of annual salary against maximum years of experience for a random sample of 100 Onsite postings, with points colored by occupation." class="figure-img">
+        </a>
+        <figcaption><strong>Onsite:</strong> 20,768 postings with a usable salary, median $57,300. 95% show exactly one year of maximum experience, which looks like a platform default.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="mp-subhead">Salary distributions: remote, hybrid and onsite</h3>
+    <div class="mp-figs">
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-hist-remote.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-hist-remote.webp" width="1200" height="600" loading="lazy" decoding="async" alt="Histogram of annual salary for remote job postings, broad and fairly even from about 40 thousand to 200 thousand dollars." class="figure-img">
+        </a>
+        <figcaption><strong>Remote:</strong> 12,007 postings with a usable salary, median $128,000. Only 9.3% pay under $50,000.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-hist-hybrid.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-hist-hybrid.webp" width="1200" height="600" loading="lazy" decoding="async" alt="Histogram of annual salary for hybrid job postings, rising to a broad peak between about 100 and 130 thousand dollars and tapering off toward 300 thousand." class="figure-img">
+        </a>
+        <figcaption><strong>Hybrid:</strong> 10,732 postings with a usable salary, median $127,300. Only 4.6% pay under $50,000, the lowest share of the three groups.</figcaption>
+      </figure>
+      <figure class="mp-fig figure">
+        <a href="assets/img/m03-hist-onsite.webp" aria-label="Open this chart at full size">
+          <img src="assets/img/m03-hist-onsite.webp" width="1200" height="600" loading="lazy" decoding="async" alt="Histogram of annual salary for onsite job postings, with a sharp peak between 30 and 50 thousand dollars and a long tail to the right." class="figure-img">
+        </a>
+        <figcaption><strong>Onsite:</strong> 51,267 postings with a usable salary, median $77,500. Nearly a third (31.8%) pay under $50,000.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <section class="mp-section" style="padding-top:0">
   <div class="mp-wrap">
-    <h2>Featured work</h2>
-    <div class="mp-grid-2">
+    <h2>More coursework and builds</h2>
+    <div class="mp-mini-grid">
 
-      <article class="mp-project is-stacked">
-        <a class="mp-thumb" href="projects.html#salary-analysis" tabindex="-1" aria-hidden="true">
-          <img src="assets/img/m03-bubble-occupations.webp" width="1200" height="566" loading="lazy" decoding="async" alt="">
-        </a>
-        <div class="mp-body">
-          <p class="mp-kicker">Course project · Fall 2026</p>
-          <h3><a href="projects.html#salary-analysis">Job-Market Salary Analysis at Scale</a></h3>
-          <p>PySpark on AWS to analyze about 504,000 job postings, with interactive charts of pay by industry, occupation, education, and remote-work type.</p>
-        </div>
-      </article>
+      <div class="mp-mini">
+        <p class="mp-kicker">Module 2 · Fall 2026</p>
+        <h3>Spark SQL and DataFrames analysis</h3>
+        <p>Spark SQL queries over a multi-table job-postings schema: salary by industry and metro area, top remote-hiring companies in California, and monthly posting trends. Null-safe joins kept rows from being silently dropped.</p>
+        <ul class="mp-tags" aria-label="Technologies"><li>Spark SQL</li><li>PySpark</li><li>Plotly</li><li>Seaborn</li></ul>
+      </div>
 
-      <article class="mp-project is-stacked">
-        <a class="mp-thumb" href="projects.html#career-evaluation-product" tabindex="-1" aria-hidden="true">
-          <img src="assets/img/g6-role-donut.webp" width="900" height="638" loading="lazy" decoding="async" alt="">
-        </a>
-        <div class="mp-body">
-          <p class="mp-kicker">Team project · Fall 2026</p>
-          <h3><a href="projects.html#career-evaluation-product">Career Evaluation Product, Group 6</a></h3>
-          <p>A career-evaluation product for aspiring data analysts, built around which skills and tools separate analyst roles from data-science roles.</p>
-        </div>
-      </article>
+      <div class="mp-mini">
+        <p class="mp-kicker">Module 1 · Fall 2026</p>
+        <h3>Cloud foundations on AWS</h3>
+        <p>Set up a cloud development environment on AWS EC2 with Spark, VS Code Remote-SSH, and Git, then used it to build and publish the first version of this site.</p>
+        <ul class="mp-tags" aria-label="Technologies"><li>AWS EC2</li><li>Spark</li><li>Git</li></ul>
+      </div>
+
+      <div class="mp-mini">
+        <p class="mp-kicker">Personal project</p>
+        <h3>This portfolio site</h3>
+        <p>Built with Quarto and deployed to GitHub Pages through GitHub Actions. Designed to load quickly, with optimized images, system fonts, no tracking scripts, a light and dark mode toggle, and accessible markup.</p>
+        <ul class="mp-tags" aria-label="Technologies"><li>Quarto</li><li>GitHub Actions</li><li>CSS</li></ul>
+        <p class="mp-links"><a class="btn btn-sm btn-outline-primary" href="https://github.com/mpp66-ctrl/mpp66-ctrl.github.io"><i class="bi bi-github" aria-hidden="true"></i> Source</a></p>
+      </div>
 
     </div>
   </div>
