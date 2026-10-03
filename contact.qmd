@@ -1,0 +1,48 @@
+---
+pagetitle: "Contact"
+description: "Contact Manan Patel by email or find the work on GitHub."
+image: assets/img/og-card.png
+image-alt: "Manan Patel, business analytics portfolio"
+page-layout: custom
+---
+
+```{=html}
+<section class="mp-pagehead">
+  <div class="mp-wrap">
+    <h1>Contact</h1>
+    <p>The best way to reach me is by email. I'm happy to connect about analytics, business analysis, or any of the projects on this site.</p>
+  </div>
+</section>
+
+<section class="mp-section">
+  <div class="mp-wrap">
+    <div class="mp-contact-grid">
+
+      <a class="mp-contact-card" href="mailto:pmanan1020@gmail.com">
+        <i class="bi bi-envelope" aria-hidden="true"></i>
+        <span>
+          <span class="mp-label">Email</span>
+          <span class="mp-value">pmanan1020@gmail.com</span>
+        </span>
+      </a>
+
+      <a class="mp-contact-card" href="https://github.com/mpp66-ctrl">
+        <i class="bi bi-github" aria-hidden="true"></i>
+        <span>
+          <span class="mp-label">GitHub</span>
+          <span class="mp-value">github.com/mpp66-ctrl</span>
+        </span>
+      </a>
+
+      <a class="mp-contact-card" href="assets/Manan_Patel_CV.pdf">
+        <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+        <span>
+          <span class="mp-label">CV</span>
+          <span class="mp-value">Download as PDF</span>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+```

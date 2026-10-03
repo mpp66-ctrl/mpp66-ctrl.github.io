@@ -1,11 +1,80 @@
 ---
-title: "About"
+pagetitle: "About Me"
+description: "About Manan Patel: background, skills, and career goals."
+image: assets/img/og-card.png
+image-alt: "Manan Patel, business analytics portfolio"
+page-layout: custom
 ---
 
-## About Me
+```{=html}
+<section class="mp-pagehead">
+  <div class="mp-wrap">
+    <h1>About Me</h1>
+    <p>Business analytics student with a background in financial technology, research, and investment analysis.</p>
+  </div>
+</section>
 
-I'm Manan Patel, a student in AD688 - Big Data and Cloud Analytics for Business at Boston University's Metropolitan College.
+<section class="mp-section">
+  <div class="mp-wrap mp-prose">
+    <p>I'm Manan Patel, a Master's student in Applied Business Analytics at Boston University's Metropolitan College (expected May 2027). I came to analytics from a business and financial-technology background: I earned my B.S. in Business Administration, with a concentration in Financial Technology, at the New Jersey Institute of Technology and was on the Dean's List from Fall 2020 through Spring 2024.</p>
+    <p>Alongside and after that degree, I worked as a research analyst at Tradedesk Securities, interned in investment real estate management at Capstone Elite, and supported program administration as a business consultant at the Explorra School of Design and Technology. Across all three, the common thread was the same: take messy information, find what matters, and explain it clearly to the people making decisions.</p>
+  </div>
+</section>
 
-## About This Site
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap">
+    <h2>How I work</h2>
+    <div class="mp-callout">
+      <p>I like to check my numbers and be upfront about what the data can't support. In a recent job-market analysis of about 504,000 postings, nearly four in five listings had no salary at all, so I reported results only on postings with real pay data instead of filling the gaps with a made-up average, and I noted the data's quirks next to each finding.</p>
+    </div>
+  </div>
+</section>
 
-This site is built with [Quarto](https://quarto.org), version-controlled with Git and GitHub, developed directly on an AWS EC2 instance, and deployed automatically via GitHub Actions to GitHub Pages.
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap">
+    <h2>Where I'm headed</h2>
+    <div class="mp-prose">
+      <p>I'm looking for business analyst and data analytics roles where I can pair requirements gathering and stakeholder work with hands-on analysis, the kind of work where a clear recommendation shapes an operational or financial decision. My interests are financial technology, data storytelling, and analytics at cloud scale.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap">
+    <h2>Toolbox</h2>
+    <div class="mp-skills">
+
+      <div class="mp-skillgroup">
+        <h3>Languages</h3>
+        <ul class="mp-tags"><li>Python</li><li>SQL</li><li>R</li></ul>
+      </div>
+
+      <div class="mp-skillgroup">
+        <h3>Analytics and BI</h3>
+        <ul class="mp-tags"><li>Advanced Excel</li><li>Power BI</li><li>Tableau</li><li>Power Query</li><li>Pivot Tables</li><li>A/B Testing</li><li>ETL</li></ul>
+      </div>
+
+      <div class="mp-skillgroup">
+        <h3>Business analysis</h3>
+        <ul class="mp-tags"><li>Requirements gathering</li><li>BRD / FRD</li><li>User stories</li><li>UAT</li><li>SDLC</li><li>Process flow diagrams</li></ul>
+      </div>
+
+      <div class="mp-skillgroup">
+        <h3>Big data and cloud (MS coursework)</h3>
+        <ul class="mp-tags"><li>PySpark</li><li>Spark SQL</li><li>AWS EC2</li></ul>
+      </div>
+
+      <div class="mp-skillgroup">
+        <h3>Publishing and workflow</h3>
+        <ul class="mp-tags"><li>Quarto</li><li>Plotly</li><li>Git and GitHub</li><li>GitHub Actions</li></ul>
+      </div>
+
+      <div class="mp-skillgroup">
+        <h3>Financial data platforms</h3>
+        <ul class="mp-tags"><li>Bloomberg Terminal</li><li>Capital IQ</li><li>FactSet</li><li>Morningstar Direct</li><li>PitchBook</li></ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+```

@@ -1,59 +1,82 @@
 ---
-title: "Welcome to My Website"
-author: "Manan Patel"
-date: today
-format:
-  html:
-    theme: journal
-    toc: true
+pagetitle: "Business Analytics Portfolio"
+description: "Portfolio of Manan Patel, an MS Applied Business Analytics student at Boston University with experience in business analysis, financial analysis, and cloud-scale data analytics."
+image: assets/img/og-card.png
+image-alt: "Manan Patel, business analytics portfolio"
+page-layout: custom
 ---
 
-# Hello, World!
+```{=html}
+<section class="mp-hero">
+  <div class="mp-wrap mp-hero-grid">
+    <div>
+      <p class="mp-eyebrow">MS Applied Business Analytics · Boston University</p>
+      <h1>Manan Patel</h1>
+      <p class="mp-lead">Business analytics student turning complex data into clear recommendations.</p>
+      <p class="mp-sub">I'm a Master's candidate at Boston University's Metropolitan College with a background in financial technology, research analysis, and investment analysis. My work spans business analysis, data analysis, and cloud-scale analytics.</p>
+      <p class="mp-cta">
+        <a class="btn btn-primary btn-lg" href="projects.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> View my projects</a>
+        <a class="btn btn-outline-primary btn-lg" href="assets/Manan_Patel_CV.pdf"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download CV</a>
+        <a class="btn btn-outline-secondary btn-lg" href="contact.html"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</a>
+      </p>
+    </div>
+    <div class="mp-avatar" aria-hidden="true">MP</div>
+  </div>
+</section>
 
-Welcome to my Quarto website, built for **AD688 - Big Data and Cloud Analytics for Business**, Assignment 1.
+<section class="mp-section">
+  <div class="mp-wrap">
+    <h2>What I do</h2>
+    <div class="mp-tiles">
+      <div class="mp-tile">
+        <i class="bi bi-diagram-3" aria-hidden="true"></i>
+        <h3>Business analysis</h3>
+        <p>Requirements gathering, process documentation, and clear communication between business and technical teams.</p>
+      </div>
+      <div class="mp-tile">
+        <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+        <h3>Data analysis and visualization</h3>
+        <p>Python, SQL, Excel, Power BI, and Tableau to analyze data and present findings people can act on.</p>
+      </div>
+      <div class="mp-tile">
+        <i class="bi bi-cloud-check" aria-hidden="true"></i>
+        <h3>Big data and cloud</h3>
+        <p>Hands-on coursework with PySpark and Spark SQL on AWS, with reproducible reporting in Quarto.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-## PySpark Demo
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap">
+    <h2>Featured work</h2>
+    <div class="mp-grid-2">
 
-This page embeds a live PySpark job that runs when the site is rendered, proving the cloud-computing environment set up on this AWS EC2 instance actually works end to end.
+      <article class="mp-project is-stacked">
+        <a class="mp-thumb" href="projects.html#salary-analysis" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/m03-bubble-occupations.webp" width="1200" height="566" loading="lazy" decoding="async"
+               alt="">
+        </a>
+        <div class="mp-body">
+          <p class="mp-kicker">Course project · Fall 2026</p>
+          <h3><a href="projects.html#salary-analysis">Job-Market Salary Analysis at Scale</a></h3>
+          <p>PySpark on AWS to analyze about 504,000 job postings, with interactive charts of pay by industry, occupation, education, and remote-work type.</p>
+        </div>
+      </article>
 
-```{python}
-from pyspark.sql import SparkSession
+      <article class="mp-project is-stacked">
+        <a class="mp-thumb" href="projects.html#career-evaluation-product" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/g6-role-donut.webp" width="900" height="638" loading="lazy" decoding="async"
+               alt="">
+        </a>
+        <div class="mp-body">
+          <p class="mp-kicker">Team project · Fall 2026</p>
+          <h3><a href="projects.html#career-evaluation-product">Career Evaluation Product, Group 6</a></h3>
+          <p>A career-evaluation product for aspiring data analysts, built around which skills and tools separate analyst roles from data-science roles.</p>
+        </div>
+      </article>
 
-spark = SparkSession.builder.appName("Assignment1Demo").getOrCreate()
-
-data = [
-    ("Data Scientist", 120000, "Remote"),
-    ("Cloud Engineer", 115000, "Boston"),
-    ("ML Engineer", 130000, "Remote"),
-    ("Data Analyst", 85000, "New York"),
-    ("DevOps Engineer", 110000, "Boston"),
-]
-columns = ["job_title", "avg_salary", "location"]
-
-df = spark.createDataFrame(data, columns)
-df.show()
+    </div>
+  </div>
+</section>
 ```
-
-### Summary Statistics
-
-```{python}
-df.describe("avg_salary").show()
-```
-
-### Average Salary by Location
-
-```{python}
-import matplotlib.pyplot as plt
-
-pdf = df.groupBy("location").avg("avg_salary").toPandas()
-pdf.columns = ["location", "avg_salary"]
-
-plt.figure(figsize=(6, 4))
-plt.bar(pdf["location"], pdf["avg_salary"], color="#457b9d")
-plt.title("Average Salary by Location")
-plt.ylabel("Average Salary ($)")
-plt.tight_layout()
-plt.show()
-```
-
-This site is set up for GitHub Pages and deployed via GitHub Actions.

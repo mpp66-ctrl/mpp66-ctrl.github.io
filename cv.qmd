@@ -1,0 +1,95 @@
+---
+pagetitle: "CV"
+description: "Curriculum vitae of Manan Patel: education, experience, and skills in business and data analytics."
+image: assets/img/og-card.png
+image-alt: "Manan Patel, business analytics portfolio"
+page-layout: custom
+---
+
+```{=html}
+<section class="mp-pagehead">
+  <div class="mp-wrap">
+    <h1>CV</h1>
+    <p>A short summary of my background. The PDF has the full details.</p>
+    <p class="mp-cta" style="margin-top:1.25rem">
+      <a class="btn btn-primary" href="assets/Manan_Patel_CV.pdf" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download CV (PDF)</a>
+      <a class="btn btn-outline-primary" href="assets/Manan_Patel_CV.pdf"><i class="bi bi-eye" aria-hidden="true"></i> View in browser</a>
+    </p>
+  </div>
+</section>
+
+<section class="mp-section">
+  <div class="mp-wrap">
+    <h2>Summary</h2>
+    <div class="mp-prose">
+      <p>Detail-oriented and analytical professional with experience across business analysis, financial modeling, and data-driven decision-making. Skilled in Python, SQL, advanced Excel, Power BI, and Tableau, with a record of working cross-functionally to gather requirements and turn complex data into clear recommendations that support business growth and operational effectiveness.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap mp-prose">
+    <h2>Education</h2>
+
+    <div class="mp-entry">
+      <h3>M.S., Applied Business Analytics</h3>
+      <span class="mp-when">Sep 2025 – May 2027</span>
+      <p class="mp-org">Boston University, Metropolitan College · GPA 3.85</p>
+    </div>
+
+    <div class="mp-entry">
+      <h3>B.S., Business Administration (Financial Technology Concentration)</h3>
+      <span class="mp-when">Sep 2020 – May 2024</span>
+      <p class="mp-org">New Jersey Institute of Technology, Martin Tuchman School of Management · GPA 3.85</p>
+      <ul><li>Dean's List, Fall 2020 – Spring 2024</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap mp-prose">
+    <h2>Experience</h2>
+
+    <div class="mp-entry">
+      <h3>Research Analyst</h3>
+      <span class="mp-when">Jun 2024 – Feb 2025</span>
+      <p class="mp-org">Tradedesk Securities</p>
+      <ul>
+        <li>Analyzed financial and operational data to support accurate reporting and identify discrepancies across systems</li>
+        <li>Analyzed operational data and system performance logs to identify recurring risks, uncovering 10+ security vulnerabilities and recommending mitigations for network gaps</li>
+        <li>Contributed to process flow diagrams and project documentation, improving cross-functional communications and increasing process efficiency by 20%</li>
+      </ul>
+    </div>
+
+    <div class="mp-entry">
+      <h3>Investment Real Estate Management Intern</h3>
+      <span class="mp-when">Jun 2023 – Aug 2023</span>
+      <p class="mp-org">Capstone Elite</p>
+      <ul>
+        <li>Conducted investment analysis on 20+ local properties using advanced Excel and analytical skills, identifying cost-effective opportunities within budget constraints and contributing to $1.2 million in successful acquisitions</li>
+        <li>Developed comprehensive financial models to assess risk, project ROI, and guide acquisition decisions—models used in 100% of internal investment reviews</li>
+      </ul>
+    </div>
+
+    <div class="mp-entry">
+      <h3>Business Consultant, Program Administration</h3>
+      <span class="mp-when">Jan 2022 – May 2023</span>
+      <p class="mp-org">Explorra School of Design and Technology</p>
+      <ul>
+        <li>Administered end-to-end execution of Explorra's International Pathway Program lifecycle, managing application, selection, and onboarding processes for cohorts across India, Canada, and UK tracks</li>
+        <li>Maintained and analyzed student data across CRM and database systems, generating reports on enrollment funnels, placement outcomes, and program performance metrics</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mp-section" style="padding-top:0">
+  <div class="mp-wrap mp-prose">
+    <h2>Certification</h2>
+    <div class="mp-entry" style="margin-top:0">
+      <h3>AI Driven Leadership &amp; Strategies for the Future</h3>
+      <p class="mp-org">Stanford University</p>
+    </div>
+  </div>
+</section>
+```
