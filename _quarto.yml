@@ -28,7 +28,7 @@ website:
     collapse-below: md
     left:
       - href: about.qmd
-        text: About
+        text: About Me
       - href: projects.qmd
         text: Projects
       - href: cv.qmd

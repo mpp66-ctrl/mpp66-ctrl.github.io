@@ -10,7 +10,7 @@ Built for AD688 - Big Data and Cloud Analytics for Business (Boston University, 
 | Page | File | Purpose |
 |---|---|---|
 | Home | `index.qmd` | Introduction, focus areas, and featured work |
-| About | `about.qmd` | Background, how I work, career goals, and toolbox |
+| About Me | `about.qmd` | Background, how I work, career goals, and toolbox |
 | Projects | `projects.qmd` | Academic projects with descriptions, visuals, and links |
 | CV | `cv.qmd` | Summary of my background and a downloadable PDF |
 | Contact | `contact.qmd` | Email and GitHub |
