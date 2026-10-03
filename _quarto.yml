@@ -1,21 +1,71 @@
 project:
   type: website
+  render:
+    - index.qmd
+    - about.qmd
+    - projects.qmd
+    - cv.qmd
+    - contact.qmd
+    - 404.qmd
+  resources:
+    - assets/img/*
+    - assets/*.pdf
 
 website:
-  title: "mpp66-ctrl.github.io"
+  title: "Manan Patel"
+  site-url: "https://mpp66-ctrl.github.io"
+  description: "Portfolio of Manan Patel, an MS Applied Business Analytics student at Boston University."
+  favicon: assets/favicon.svg
+  search: false
+  back-to-top-navigation: true
+  open-graph:
+    locale: en_US
+    site-name: "Manan Patel"
+  twitter-card:
+    card-style: summary_large_image
   navbar:
+    pinned: true
+    collapse-below: md
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects
+      - href: cv.qmd
+        text: CV
+      - href: contact.qmd
+        text: Contact
+    tools:
+      - icon: github
+        href: https://github.com/mpp66-ctrl
+        aria-label: "GitHub profile"
+  page-footer:
+    border: false
+    left: "© 2026 Manan Patel · Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/mpp66-ctrl
+        aria-label: "GitHub profile"
+      - icon: envelope
+        href: "mailto:pmanan1020@gmail.com"
+        aria-label: "Email Manan"
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: [cerulean, theme-light.scss]
+      dark: [slate, theme-dark.scss]
+    respect-user-color-scheme: true
     css: styles.css
-    toc: true
-
-
-
+    lang: en
+    toc: false
+    page-layout: custom
+    title-block-style: none
+    smooth-scroll: true
+    anchor-sections: false
+    code-copy: false
+    citations-hover: false
+    footnotes-hover: false
+    link-external-icon: false
+    link-external-newwindow: true
+    include-before-body: _design/skip-link.html

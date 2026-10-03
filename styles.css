@@ -1,1 +1,624 @@
-/* css styles */
+/* =====================================================================
+   Manan Patel — portfolio styles
+   Colors come from Bootstrap variables so light/dark mode both work.
+   ===================================================================== */
+
+:root {
+  --mp-radius: 1rem;
+  --mp-heading: Georgia, "Times New Roman", Times, serif;
+  --mp-shadow: 0 1px 2px rgba(15, 23, 34, 0.06), 0 8px 24px rgba(15, 23, 34, 0.06);
+  --mp-shadow-hover: 0 2px 4px rgba(15, 23, 34, 0.08), 0 14px 32px rgba(15, 23, 34, 0.14);
+  --mp-hero-bg: linear-gradient(135deg, #eef6f2 0%, #f7f5f0 55%, #eef1f6 100%);
+  --mp-chip-bg: rgba(11, 110, 79, 0.1);
+  --mp-chip-fg: #0b6e4f;
+}
+
+body.quarto-dark {
+  --mp-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --mp-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.5), 0 14px 32px rgba(0, 0, 0, 0.5);
+  --mp-hero-bg: linear-gradient(135deg, #13222e 0%, #0f1722 55%, #161c2b 100%);
+  --mp-chip-bg: rgba(94, 208, 165, 0.14);
+  --mp-chip-fg: #5ed0a5;
+}
+
+/* ---------- Page frame (custom layout) ---------- */
+.mp-wrap {
+  max-width: 1040px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Quarto ships "#quarto-content > * { padding-top: 0 }" (below 992px), and an ID
+   selector beats a class, so these are scoped under #quarto-content to win. */
+#quarto-content > .mp-section {
+  padding-block: clamp(2rem, 5vw, 3.25rem);
+}
+
+#quarto-content > .mp-hero {
+  padding-block: clamp(3rem, 8vw, 5.5rem);
+}
+
+#quarto-content > .mp-pagehead {
+  padding-block: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.mp-section > .mp-wrap > h2,
+.mp-h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mp-section > .mp-wrap > h2::before,
+.mp-h2::before {
+  content: "";
+  width: 0.35rem;
+  height: 1.4rem;
+  border-radius: 99px;
+  background: var(--bs-primary);
+  flex: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--bs-primary);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.mp-skip {
+  position: absolute;
+  z-index: 2000;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.5rem;
+}
+
+/* ---------- Hero (home page) ---------- */
+.mp-hero {
+  background: var(--mp-hero-bg);
+  border-bottom: 1px solid var(--bs-border-color);
+  padding-block: clamp(3rem, 8vw, 5.5rem);
+}
+
+.mp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.mp-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  margin: 0 0 0.75rem;
+}
+
+.mp-hero h1 {
+  font-family: var(--mp-heading);
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+.mp-lead {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.45;
+  max-width: 34rem;
+  margin: 0 0 1rem;
+}
+
+.mp-sub {
+  color: var(--bs-secondary-color);
+  max-width: 36rem;
+  margin: 0 0 1.75rem;
+}
+
+.mp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.mp-avatar {
+  justify-self: center;
+  width: clamp(150px, 22vw, 240px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 700 clamp(3rem, 7vw, 5rem) / 1 var(--mp-heading);
+  color: #fff;
+  background: linear-gradient(145deg, #0b6e4f, #3d5a80);
+  box-shadow: var(--mp-shadow-hover);
+  border: 6px solid var(--bs-body-bg);
+}
+
+@media (max-width: 767px) {
+  .mp-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mp-avatar {
+    order: -1;
+    justify-self: start;
+    width: 112px;
+    font-size: 2.6rem;
+  }
+}
+
+/* ---------- Inner page header band ---------- */
+.mp-pagehead {
+  background: var(--mp-hero-bg);
+  border-bottom: 1px solid var(--bs-border-color);
+  padding-block: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.mp-pagehead h1 {
+  font-family: var(--mp-heading);
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  margin: 0 0 0.5rem;
+}
+
+.mp-pagehead p {
+  color: var(--bs-secondary-color);
+  font-size: 1.1rem;
+  max-width: 44rem;
+  margin: 0;
+}
+
+/* ---------- Tiles ---------- */
+.mp-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.mp-tile {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  padding: 1.4rem;
+  background: var(--bs-body-bg);
+  box-shadow: var(--mp-shadow);
+}
+
+.mp-tile i {
+  font-size: 1.6rem;
+  color: var(--bs-primary);
+}
+
+.mp-tile h3 {
+  font-size: 1.15rem;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.mp-tile p {
+  margin: 0;
+  color: var(--bs-secondary-color);
+  font-size: 0.98rem;
+}
+
+/* ---------- Project cards ---------- */
+.mp-project {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  overflow: hidden;
+  background: var(--bs-body-bg);
+  box-shadow: var(--mp-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  margin-bottom: 1.75rem;
+}
+
+.mp-project:hover {
+  box-shadow: var(--mp-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.mp-project.is-stacked {
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 0;
+}
+
+.mp-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.mp-thumb {
+  display: grid;
+  place-items: center;
+  background: var(--bs-tertiary-bg);
+  padding: 1rem;
+}
+
+.mp-thumb img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 6px rgba(15, 23, 34, 0.12);
+}
+
+.mp-body {
+  padding: 1.5rem 1.75rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-kicker {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--bs-secondary-color);
+  margin: 0 0 0.4rem;
+}
+
+.mp-body h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.mp-body h3 a {
+  color: inherit;
+}
+
+.mp-body p {
+  margin: 0 0 0.5rem;
+}
+
+.mp-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mp-tags li {
+  background: var(--mp-chip-bg);
+  color: var(--mp-chip-fg);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mp-links {
+  margin-top: auto !important;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.mp-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+}
+
+.mp-mini {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  padding: 1.35rem 1.4rem;
+  background: var(--bs-body-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-mini h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+
+.mp-mini p {
+  margin: 0 0 0.5rem;
+  color: var(--bs-secondary-color);
+  font-size: 0.98rem;
+}
+
+.mp-mini .mp-tags {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 767px) {
+  .mp-project {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mp-project {
+    transition: none;
+  }
+  .mp-project:hover {
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- About: skills ---------- */
+.mp-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.mp-skillgroup {
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  padding: 1.2rem 1.35rem;
+  background: var(--bs-body-bg);
+}
+
+.mp-skillgroup h3 {
+  font-size: 1rem;
+  margin: 0 0 0.6rem;
+  font-family: var(--bs-body-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bs-secondary-color);
+}
+
+.mp-skillgroup .mp-tags {
+  margin: 0;
+}
+
+.mp-prose {
+  max-width: 46rem;
+}
+
+.mp-prose p {
+  margin-bottom: 1.1rem;
+}
+
+.mp-callout {
+  border-left: 4px solid var(--bs-primary);
+  background: var(--bs-tertiary-bg);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--mp-radius) var(--mp-radius) 0;
+  max-width: 46rem;
+}
+
+.mp-callout p {
+  margin: 0;
+}
+
+/* ---------- CV ---------- */
+.mp-entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1rem 1rem;
+  margin-top: 1.6rem;
+}
+
+.mp-entry h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.mp-when {
+  color: var(--bs-secondary-color);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+}
+
+.mp-org {
+  grid-column: 1 / -1;
+  color: var(--bs-secondary-color);
+  margin: 0;
+}
+
+.mp-entry ul {
+  grid-column: 1 / -1;
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.mp-entry li {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .mp-entry {
+    grid-template-columns: 1fr;
+  }
+  .mp-when {
+    white-space: normal;
+  }
+}
+
+/* ---------- Contact ---------- */
+.mp-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+
+.mp-contact-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  padding: 1.25rem 1.4rem;
+  color: inherit;
+  background: var(--bs-body-bg);
+  box-shadow: var(--mp-shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mp-contact-card:hover {
+  border-color: var(--bs-primary);
+  box-shadow: var(--mp-shadow-hover);
+  text-decoration: none;
+  color: inherit;
+}
+
+.mp-contact-card i {
+  font-size: 1.7rem;
+  color: var(--bs-primary);
+  flex: none;
+}
+
+.mp-contact-card .mp-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bs-secondary-color);
+}
+
+.mp-contact-card .mp-value {
+  display: block;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Footer ---------- */
+.nav-footer {
+  border-top: 1px solid var(--bs-border-color) !important;
+  padding-block: 1.25rem;
+}
+
+/* ---------- Figures (chart comparison) ---------- */
+.mp-figs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.mp-fig {
+  margin: 0;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--mp-radius);
+  overflow: hidden;
+  background: var(--bs-body-bg);
+  box-shadow: var(--mp-shadow);
+}
+
+.mp-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mp-fig figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  color: var(--bs-secondary-color);
+}
+
+/* ---------- Polish ---------- */
+/* Flat, modern buttons and navbar (Bootswatch bases add gradients and dividers) */
+.btn,
+.btn:hover {
+  background-image: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.navbar,
+.navbar .nav-link,
+.navbar .nav-item {
+  background-image: none !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Uniform thumbnail area so side-by-side featured cards line up */
+.mp-project.is-stacked .mp-thumb {
+  aspect-ratio: 16 / 10;
+}
+
+.mp-project.is-stacked .mp-thumb img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Soften bright white chart backgrounds in dark mode */
+body.quarto-dark .mp-thumb img,
+body.quarto-dark .mp-fig img {
+  filter: brightness(0.9);
+}
+
+.mp-thumb {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Stacked featured cards: image is positioned inside a fixed-ratio frame so it can never be cropped */
+.mp-project.is-stacked .mp-thumb {
+  position: relative;
+  padding: 0;
+}
+
+.mp-project.is-stacked .mp-thumb img {
+  position: absolute;
+  inset: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* When .mp-prose shares an element with .mp-wrap, keep the full-width frame (so it left-aligns
+   with the section headings) and limit only the text blocks to a readable line length. */
+.mp-wrap.mp-prose {
+  max-width: 1040px;
+}
+
+.mp-wrap.mp-prose > :not(h2) {
+  max-width: 46rem;
+}
+
+/* Dark mode: the light-green primary button needs dark text to meet WCAG contrast (4.5:1) */
+body.quarto-dark .btn-primary,
+body.quarto-dark .btn-primary:hover,
+body.quarto-dark .btn-primary:focus,
+body.quarto-dark .btn-primary:active {
+  color: #0b1220 !important;
+}
+
+/* Chart gallery on Projects */
+.mp-section-intro {
+  max-width: 62ch;
+  color: var(--bs-secondary-color);
+}
+
+.mp-subhead {
+  margin: 2rem 0 0.9rem;
+  font-size: 1.15rem;
+}
+
+.mp-fig-wide {
+  grid-column: 1 / -1;
+}
+
+.mp-fig a {
+  display: block;
+}
